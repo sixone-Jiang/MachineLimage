@@ -4,7 +4,7 @@
 
 ## 环境
 
-预先准备： Windows环境、conda命令可用
+预先准备： Windows环境、conda命令可用(自行查阅网络文档)
 
 为了避免环境冲突，我的建议是新建一个python环境（此处命名为tensorflow）
 
@@ -14,25 +14,35 @@
 
  其余按照`setup.txt`依次安装最新版本
 
-## 运行
+## 快速开始
 
-` python run.py `（注意需要用conda先激活tensor环境，且注意文件目录）
+使用` python load_trainning.py `（注意需要用conda先激活tensorflow环境，且注意文件目录）
 
 或者以任何形式导入`image.ipynb`到 jupyter 使用jupyter运行（到网上查阅jupyter-python环境配置）
 
-## 其他的一些解释
+## 模型预测
 
+（前置条件，拥有一个已经训练好的模型（.h5文件））
 
+运行`python predict.py`  
 
-## 神经网络结构解释
+按照文件中注释选择想要预测的图片（试着自己拍一张？）
+
+## 已经训练的网络适用
+
+共十类：
+
+`  'airplane', 'automobile', 'bird', 'cat', 'deer','dog', 'frog', 'horse', 'ship', 'truck' `
+
+## 继续训练和迁移训练
+
+模型严格遵循keras标准，可用查询keras官方文档对模型结构进行修改
+
+`Self-train.py` 中有一个简单的示例
+
+## 神经网络结构详细解释
 
 懒懒的作者决定之后再写
-
-## 关于流程化
-
-`model_image.h5` 为模型文件，也可以调用后直接预测结果（调用方法参见image.ipynb-注释：预测）
-
-
 
 ## WHAT'S MORE?
 
